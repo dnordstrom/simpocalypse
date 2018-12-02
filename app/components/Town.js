@@ -51,23 +51,23 @@ export default class Town extends Component {
       <div className={styles.container}>
         <div className={styles.header}>
           <div>
-            <Link alt="To overview" className={styles.button} to={routes.HOME}>
+            <Link title="To overview" className={styles.button} to={routes.HOME}>
               <i className="fa fa-arrow-left fa-3x" />
             </Link>
             <a
-              alt={paused ? 'Unpause' : 'Pause'}
+              title={paused ? 'Unpause' : 'Pause'}
               className={styles.button}
               onClick={this.toggleSimulation.bind(this)}>
               <i className={`fa fa-${paused ? 'play' : 'pause'} fa-3x`} />
             </a>
             <a
-              alt="Slower"
+              title="Slower"
               className={`${styles.button} ${delay + 250 > 5000 ? styles.buttonDisabled : ''}`}
               onClick={this.setDelay.bind(this, delay + 250)}>
               <i className="fa fa-backward fa-3x" />
             </a>
             <a
-              alt="Faster"
+              title="Faster"
               disabled={delay >= 5000}
               className={`${styles.button} ${delay - 250 < 500 ? styles.buttonDisabled : ''}`}
               onClick={this.setDelay.bind(this, delay - 250)}>
