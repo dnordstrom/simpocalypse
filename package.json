@@ -1,7 +1,7 @@
 {
   "name": "simpocalypse",
   "productName": "Simpocalypse",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React/Redux learning project simulating a zombie attack.",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",

@@ -54,10 +54,12 @@ export default function town(state, action) {
     case TOGGLE_SIMULATION:
       return { ...state, paused: !state.paused };
     default:
-      return {
-        ...getInitialState(),
-        results: state ? Array.from(state.results) : [],
-        delay: state ? state.delay : 1500
-      };
+      if (state) {
+        return state;
+      } else {
+        return {
+          ...getInitialState()
+        };
+      }
   }
 }
