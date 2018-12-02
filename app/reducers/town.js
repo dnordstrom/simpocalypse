@@ -57,9 +57,7 @@ export default function town(state, action) {
       if (state) {
         return state;
       } else {
-        return {
-          ...getInitialState()
-        };
+        return getInitialState();
       }
   }
 }
