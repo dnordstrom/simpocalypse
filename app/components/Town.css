@@ -1,0 +1,77 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  width: 92%;
+  padding: 0 0px 16px;
+  font-size: 1.2rem;
+}
+
+.footer {
+  padding: 26px;
+  font-size: 1.8rem;
+}
+
+.button {
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+.buttonDisabled {
+  cursor: default;
+  color: #999999;
+  opacity: 1;
+}
+
+.dayCounter i {
+  margin-right: 12px;
+}
+
+.house {
+  background: var(--house-color);
+  display: inline-block;
+  height: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  position: relative;
+  width: 30px;
+  transition: var(--house-transition);
+}
+
+.house:before {
+  border-bottom: 15px solid var(--house-color);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  content: "";
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: -15px;
+  width: 0;
+  transition: var(--house-transition);
+}
+
+.house.infected {
+  background: var(--house-infected-color);
+  border-color: var(--house-infected-color);
+}
+
+.house.infected:before {
+  border-bottom-color: var(--house-infected-color);
+}

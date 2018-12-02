@@ -1,0 +1,32 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+html {
+  --house-color: #9eeaff;
+  --house-infected-color: #d52960;
+  --house-transition: 0.2s ease-out all;
+}
+
+body {
+  position: relative;
+  color: white;
+  height: 100vh;
+  font-weight: bold;
+  background-color: #282c34;
+  background-image: linear-gradient(45deg, #1f2023 10%, #282c34);
+  font-family: "Segoe UI", Arial, Helvetica, Helvetica Neue, serif;
+  overflow-y: hidden;
+}
+
+a {
+  color: white;
+  opacity: 0.75;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 1;
+}
